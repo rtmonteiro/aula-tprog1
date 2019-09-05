@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "data.h"
 #include "aluno.h"
+#include "turma.h"
 
 turma lerTurma() {
 
