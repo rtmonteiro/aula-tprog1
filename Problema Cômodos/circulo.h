@@ -1,12 +1,8 @@
 #ifndef _CIRCULO
   #define _CIRCULO
+  #include "ponto.h"
 
-  typedef struct circulo
-  {
-    tPonto p;
-    int raio;
-  };
-  
+  typedef struct circulo tCirculo;
 
   tCirculo lerCirculo(tPonto, int);
   void apresentarCirculo(tCirculo);
