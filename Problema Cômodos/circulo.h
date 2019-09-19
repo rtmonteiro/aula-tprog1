@@ -3,7 +3,7 @@
 
   typedef struct circulo tCirculo;
 
-  tCirculo lerCirculo(tPonto, int);
+  tCirculo* lerCirculo(tPonto p, int raio);
   void apresentarCirculo(tCirculo);
 
 #endif
