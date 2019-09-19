@@ -9,8 +9,8 @@ typedef struct Turma {
   int nAlunos;
 } tTurma;
 
-turma lerTurma();
-turma apresentarTurma();
+tTurma lerTurma();
+tTurma apresentarTurma();
 int obterNumeroAlunos();
 void ordenarMatricula();
 void ordenarIngresso();

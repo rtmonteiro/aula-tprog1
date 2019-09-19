@@ -3,12 +3,10 @@
 
 //Tipo aluno (tipo opaco)
 //Estrutura interna do tipo deve ser definida na implementação do TAD
-typedef struct Data{
-  int dia, mes, ano;
-} tData;
+typedef struct Data tData;
 
 tData lerData();
 tData apresentaData();
-void igualdadeData();
+int igualdadeData();
 void menorData();
 #endif

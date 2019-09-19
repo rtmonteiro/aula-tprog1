@@ -3,6 +3,10 @@
 
 #include "data.h"
 
+struct Data{
+  int dia, mes, ano;
+};
+
 tData lerData() {
     tData data;
     scanf("%d %d %d", &data.dia, &data.mes, &data.ano);
@@ -13,7 +17,7 @@ int igualdadeData(tData data1, tData data2) {
     int bool = 0;
 
     if (strcmp(data1.dia,data2.dia) && strcmp(data1.mes,data2.mes) && strcmp(data1.ano,data2.ano)){
-        int bool = 1
+        int bool = 1;
     }
     return bool;
 }
