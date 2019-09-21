@@ -1,6 +1,9 @@
 #.vscode folder
 /.vscode
 
+# Class files
+*.zip
+
 # Prerequisites
 *.d
 
