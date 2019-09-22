@@ -1,6 +1,9 @@
 #.vscode folder
 /.vscode
 
+# Livro de C
+c-completo-total.pdf
+
 # Class files
 *.zip
 
