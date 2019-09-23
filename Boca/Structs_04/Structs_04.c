@@ -65,6 +65,8 @@ racional produ (racional x, racional y) {
    z.p = x.p * y.p;
    z.q = x.q * y.q;
    z = reduz(z.p, z.q);
+
+   return z;
 }
 
 // int main(int argc, char const *argv[])
