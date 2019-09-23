@@ -78,8 +78,16 @@ int mmc(int q1, int q2)
 /* Recebe os racionais x e y e devolve o racional que representa a soma de x e y */
 racional soma(racional x, racional y)
 {
-   /* INSIRA SEU CODIGO AQUI */
+   racional z;
+   int MMC = mmc(x.q, y.q);
+   x.p*=(MMC/x.q);
+   y.p*=(MMC/y.q);
+   z.p = x.p + y.p;
+   z.q = MMC;
    
+   z = reduz(z.p, z.q);
+   
+   return z;
 }
 
 int main(int argc, char const *argv[])
@@ -96,12 +104,13 @@ int main(int argc, char const *argv[])
    printf("%d/%d\n", x.p, x.q);
    printf("%d/%d\n", y.p, y.q);
 
-   int MMC;
-   MMC = mmc(x.q, y.q);
+   racional z = soma(x, y);
+   printf("%d/%d\n", z.p, z.q);
+
 
    return 0;
 }
 // input:
-// 4 1 1 8 -> 129/8
-// 8 2 -2 -16 -> 129/8
-// -8 -2 -2 -16 -> 129/8
+// 4 1 1 8 -> 33/8
+// 8 2 -2 -16 -> 33/8
+// -8 -2 -2 -16 -> 33/8
