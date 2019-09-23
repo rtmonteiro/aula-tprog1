@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 /* 
    Racional de qualquer numero da forma p/q, sendo p inteiro e q inteiro nao nulo. Vamos
@@ -11,14 +13,78 @@ typedef struct {
 } racional;
 
 /* INSIRA SEU CODIGO AQUI, CASO DESEJE CRIAR ALGUMA FUNCAO AUXILIAR */
+racional reduz(int a, int b)
+{
+   racional r;
 
+   int mdc = 1;
+   int neg = 0;
+
+   if ((a < 0) != (b < 0))
+   {
+      neg = 1;
+   }
+   r.p = a = abs(a);
+   r.q = b = abs(b);
+
+   int count = a;
+   if (a > b)
+   {
+      count = b;
+   }
+
+   for (int i = count; i >= 1; i--)
+   {
+      if (a % i == 0 && b % i == 0 && i != 1)
+      {
+         mdc = i * mdc;
+         a = a / i;
+         b = b / i;
+         break;
+      }
+   }
+
+   if (neg == 1)
+   {
+      r.p = -(r.p / mdc);
+   }
+   else
+   {
+      r.p = r.p / mdc;
+   }
+   r.q = r.q / mdc;
+
+   return r;
+}
 
 
 /* Recebe os racionais x e y e devolve o racional que representa o produto de x por y */
 racional produ (racional x, racional y) {
-
 	/* INSIRA SEU CODIGO AQUI */
-	
-	
-		
+   racional z;
+   z.p = x.p * y.p;
+   z.q = x.q * y.q;
+   z = reduz(z.p, z.q);
 }
+
+// int main(int argc, char const *argv[])
+// {
+//    int a, b, c, d;
+//    // printf("Sendo p/q\n");
+//    scanf("%d", &a);
+//    scanf("%d", &b);
+//    scanf("%d", &c);
+//    scanf("%d", &d);
+
+//    racional x, y;
+//    x = reduz(a, b);
+//    y = reduz(c, d);
+//    printf("%d/%d\n", x.p, x.q);
+//    printf("%d/%d\n", y.p, y.q);
+
+//    racional z = produ(x, y);
+//    printf("%d/%d\n", z.p, z.q);
+
+
+//    return 0;
+// }
