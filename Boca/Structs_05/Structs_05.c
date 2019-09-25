@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 /* 
    Racional de qualquer numero da forma p/q, sendo p inteiro e q inteiro nao nulo. Vamos
@@ -66,3 +68,25 @@ racional quoci (racional x, racional y) {
 
    return z;
 }
+
+// int main(int argc, char const *argv[])
+// {
+//    int a, b, c, d;
+//    // printf("Sendo p/q\n");
+//    scanf("%d", &a);
+//    scanf("%d", &b);
+//    scanf("%d", &c);
+//    scanf("%d", &d);
+
+//    racional x, y;
+//    x = reduz(a, b);
+//    y = reduz(c, d);
+//    printf("%d/%d\n", x.p, x.q);
+//    printf("%d/%d\n", y.p, y.q);
+
+//    racional z = quoci(x, y);
+//    printf("%d/%d\n", z.p, z.q);
+
+
+//    return 0;
+// }
