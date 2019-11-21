@@ -20,13 +20,15 @@ tIntGrande lerNumero() {
     num.tam = i;
     i++;
   }
-  
-  
+
+  return num;
 }
 
 int main(int argc, char const *argv[])
 {
-  tIntGrande num = lerNumero();
+  tIntGrande num1 = lerNumero();
+  tIntGrande num2 = lerNumero();
+
 
   return 0;
 }
