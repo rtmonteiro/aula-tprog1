@@ -1,5 +1,3 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cert-err34-c"
 //
 // Created by ryan on 20/11/2019.
 //
