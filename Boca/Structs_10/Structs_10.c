@@ -38,17 +38,17 @@ float calculo_MF(Aluno aluno) {
 }
 
 void imprime_aprovados (int n, Aluno* turma){
-    Aluno* alunos_aprovados[n];
-    int j = 0;
+//    Aluno* alunos_aprovados[n];
+//    int j = 0;
     for (int i = 0; i < n; ++i) {
         float mf = calculo_MF(turma[i]);
         if (mf>=7.0){
-            alunos_aprovados[j] = &turma[i];
-            j++;
+//            alunos_aprovados[j] = &turma[i];
+//            j++;
             printf("Mat: %s, Nome: %s, Turma: %c, MF: %.2f\n",
-                    alunos_aprovados[i]->matricula,
-                    alunos_aprovados[i]->nome,
-                    alunos_aprovados[i]->turma,
+                    turma[i].matricula,
+                    turma[i].nome,
+                    turma[i].turma,
                     mf);
         }
     }
